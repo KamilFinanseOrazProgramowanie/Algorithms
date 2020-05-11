@@ -1,0 +1,50 @@
+// First algorithm (polyndrome)
+// Body of the function - without implementation main() function
+
+bool isPalindrome(const std::string & text){
+    
+    if (text.empty())
+        return false;
+
+    int i = 0;
+    int j = text.length() - 1;
+
+    while (i < j){
+        if (text[i] != text[j]){
+            return false;
+        }
+        i++;
+        j--;
+    }
+    return true;
+}
+
+// Another solution
+
+/*
+#include<iostream>
+#include<string>
+// But it's not necessary in this example (using namespace std;)
+using namespace std;
+
+int main()
+{
+	int i,j;
+	string czy_palindrom_czy_nie;
+
+	cout << "Podaj wyraz: ";
+	cin >> czy_palindrom_czy_nie;
+
+	for (i = 0, j = czy_palindrom_czy_nie.length()-1; i < j; i++, j--){
+		if (czy_palindrom_czy_nie[i] != czy_palindrom_czy_nie[j])
+			break;
+	}
+
+	if (i < j){
+		cout << "Podany wyraz nie jest palindromem" << endl;
+	}else{
+		cout << "Podany wyraz jest palindromem" << endl;
+	}
+    return 0;
+}
+*/
